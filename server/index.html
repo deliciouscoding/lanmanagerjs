@@ -1,0 +1,18 @@
+<script src="/socket.io/socket.io.js"></script>
+<input name="username" type="text" maxlength="15" id="uname" class="credentials"/>
+<input name="password" type="text" maxlength="15" id="pw" class="credentials"/>
+<button type="button" id="connect" onclick="connect()">Connect</button>
+
+<script>
+function connect() {
+  var socket = io('http://localhost');
+  
+  socket.on('connected', function (data) {
+    console.log(data);
+    var uname = document.getElementById("uname").value 
+    var passwd = document.getElementById("pw").value;
+    
+    socket.emit('chatmsg', { username: uname, pw: passwd });
+  });
+}
+</script>

@@ -1,0 +1,67 @@
+.container {
+  display: grid;
+  grid-template-rows: 20px auto;
+    
+  background-color: #444444;
+
+ header{
+   display: grid;
+   grid-template-columns: 20px 85% auto;
+   font-size: 20px;
+   
+   span {
+     color: #ff7711;
+     -webkit-app-region: drag;
+     
+   }
+   strong {
+     color: #6b81ff;
+     -webkit-app-region: drag;
+   }
+   img {
+    width: 20px;
+  }
+
+   nav {
+     justify-self: right;
+
+     ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      
+      li {
+        float:left;
+        margin-left: 8px;
+
+        img {
+          width: 16px;
+                    cursor: pointer;
+        }
+      }
+     }
+   }
+ }
+
+  main {
+    display: grid;
+    grid-template-columns: 200px auto auto;
+    background-color: #3b3b3b;
+
+    div {
+      display: grid;
+      grid-template-rows: 40px 40px 40px;
+      background: #00eb3b;
+      align-self: center;
+      padding: 10px;
+      margin: 5px;
+
+      input{
+        padding: 10px;
+        height:10px;
+      }
+    };
+  }
+};
+
+
