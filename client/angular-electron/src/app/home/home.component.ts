@@ -1,8 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ElectronService } from '../core/services';
 
-import {Socket} from "socket.io";
-
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
@@ -10,19 +8,18 @@ import {Socket} from "socket.io";
 })
 export class HomeComponent implements OnInit {
 
-  constructor(private electron: ElectronService, private sock: Socket) { 
-   this.sock("http://localhost")
-
+  constructor(private electron: ElectronService) { 
   } 
  
+  /*
   connectServer(data) {
-    this.socket.on('connected', function (data) {
+    this.sock.on('connected', function (data) {
     console.log(data);
     
-    this.socket.emit('chatmsg', { username: uname, pw: passwd });
-    }
+    this.socket.emit('chatmsg', { data });
+    })
   }
-
+*/
   ngOnInit(): void { }
 
   closeWindow() {
