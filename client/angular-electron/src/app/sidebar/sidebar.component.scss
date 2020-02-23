@@ -1,0 +1,24 @@
+.sidebar-container {
+  background-color: #19e64c;
+  grid-area: sidebar;
+
+  nav {
+    justify-self: left;
+    margin-left: 5px;
+
+    ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+
+      li {
+        margin-left: 8px;
+
+        img {
+          width: 16px;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}

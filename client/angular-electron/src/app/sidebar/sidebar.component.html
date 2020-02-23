@@ -1,0 +1,10 @@
+<div class="sidebar-container">
+    <a routerLink="/" class="logo" (click)="settitle('Home')"><span><strong>LAN</strong>{{menutitle}}</span></a>
+    <nav>
+        <ul>
+            <li><a routerLink="/" (click)="settitle('Home')">Home</a></li>
+            <li><a routerLink="/games" (click)="settitle('Games')">Games</a></li>
+            <li><a routerLink="/chat" (click)="settitle('Chat')">Chat</a></li>
+        </ul>
+    </nav>
+</div>
