@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ElectronService } from '../core/services';
+import { ElectronService, ChatService} from '../core/services';
 
 @Component({
   selector: 'app-home',
@@ -8,18 +8,16 @@ import { ElectronService } from '../core/services';
 })
 export class HomeComponent implements OnInit {
 
-  constructor(private electron: ElectronService) { 
+
+  constructor(private electron: ElectronService, private chat: ChatService) { 
+  
   } 
- 
-  /*
-  connectServer(data) {
-    this.sock.on('connected', function (data) {
-    console.log(data);
-    
-    this.socket.emit('chatmsg', { data });
-    })
+
+  sendData() {
+    this.chat.sendMessage({ uname: "hans", pw: "peter" });
   }
-*/
+  
+
   ngOnInit(): void { }
 
   closeWindow() {

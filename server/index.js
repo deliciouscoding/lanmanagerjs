@@ -4,7 +4,7 @@ var app = require('http').createServer(handler)
 var io = require('socket.io')(app);
 var fs = require('fs');
 
-app.listen(80);
+app.listen(8080);
 
 function handler (req, res) {
 	fs.readFile(__dirname + '/index.html',
@@ -25,7 +25,7 @@ io.on('connection', function (socket) {
 	socket.emit('connected', { data: "Hello Friend!"})
 	
 	socket.on('chatmsg', function (data) {
-	
+		console.log("CHATMSG received:")
 		console.log(data);
 	});
 });

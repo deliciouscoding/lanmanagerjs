@@ -22,6 +22,7 @@ import { AppComponent } from './app.component';
 export function HttpLoaderFactory(http: HttpClient): TranslateHttpLoader {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
 }
+import { ChatService } from './core/services';
 
 @NgModule({
   declarations: [AppComponent],
@@ -41,7 +42,7 @@ export function HttpLoaderFactory(http: HttpClient): TranslateHttpLoader {
       }
     })
   ],
-  providers: [],
+  providers: [ChatService],
   bootstrap: [AppComponent]
 })
 export class AppModule {}
