@@ -1,7 +1,6 @@
 <div class="home-container">
-	<p>Home</p>
+	<h1>Home</h1>
 	<input type="text" *ngIf="!chat.connected" [(ngModel)]="login$.uname" (click)="login$.uname=''" (keyup.enter)="login()">
  	<button *ngIf="!chat.connected" (click)="sendData()">Login</button>
  <input type="text" *ngIf="chat.connected" [(ngModel)]="msg" (keyup.enter)="sendData()">
 </div>
-

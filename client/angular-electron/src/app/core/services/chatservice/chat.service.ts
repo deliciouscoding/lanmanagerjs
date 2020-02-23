@@ -11,11 +11,12 @@ export class ChatService {
 
     constructor(private socket: Socket) {
 
+        console.log("chatservice initiated")
         this.socket.on("login", function(data) {
             console.log('yeah, were logged in')
         
             console.log(data)
-            if (data == 'success' ) {
+            if (data.status == 'success' ) {
                 console.log("connected!")
                 this.connected = true;
             }
@@ -29,6 +30,10 @@ export class ChatService {
 
     sendMessage(data){
         this.socket.emit("chatmsg", data);
+    }
+
+    getconnectedstate(){
+        return this.connected;
     }
    
 }

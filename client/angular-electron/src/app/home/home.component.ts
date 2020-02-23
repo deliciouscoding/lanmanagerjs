@@ -12,10 +12,10 @@ export class HomeComponent implements OnInit {
 
   public login$ :Login;
   public msg: string = "undefined";
-  public chat: ChatService;
-
-  constructor(private electron: ElectronService, chat: ChatService) { 
-    
+  public con: boolean;
+  
+  constructor(private electron: ElectronService, public chat: ChatService) { 
+    console.log("init HomeComponent");
     this.login$ = {
       uname : "Username",
       pw : "",
