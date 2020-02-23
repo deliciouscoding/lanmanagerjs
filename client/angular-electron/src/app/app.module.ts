@@ -16,6 +16,8 @@ import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 
 import { HomeModule } from './home/home.module';
 
+import {SidebarModule} from './sidebar/sidebar.module'
+
 import { AppComponent } from './app.component';
 
 // AoT requires an exported function for factories
@@ -23,9 +25,12 @@ export function HttpLoaderFactory(http: HttpClient): TranslateHttpLoader {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
 }
 import { ChatService } from './core/services';
+import { GamesComponent } from './games/games.component';
+import { ChatComponent } from './chat/chat.component';
+import {SidebarComponent} from './sidebar/sidebar.component'
 
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [AppComponent, GamesComponent, ChatComponent, SidebarComponent],
   imports: [
     BrowserModule,
     FormsModule,
@@ -33,6 +38,7 @@ import { ChatService } from './core/services';
     CoreModule,
     SharedModule,
     HomeModule,
+    SidebarModule,
     AppRoutingModule,
     TranslateModule.forRoot({
       loader: {

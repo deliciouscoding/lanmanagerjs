@@ -1,1 +1,17 @@
+<div class="appheader">
+    <header> 
+       <img src="./assets/mainwindow/controller.png"><strong><span>LAN</span>MANAGER</strong>
+        <nav>
+            <ul>
+                <li><img src="./assets/mainwindow/miniWindow.png"  id ="min" (click)="minimizeWindow()"></li>
+                <li><img src="./assets/mainwindow/closeWindow.png" (click)="closeWindow()"></li>
+           </ul>
+       </nav>
+    </header>
+</div>
+
+<div class="appbody">
+<app-sidebar></app-sidebar> 
 <router-outlet></router-outlet>
+</div>
+

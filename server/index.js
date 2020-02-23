@@ -20,12 +20,18 @@ function handler (req, res) {
 }
 
 io.on('connection', function (socket) {
-	socket.username = "Bruh"
-
 	socket.emit('connected', { data: "Hello Friend!"})
 	
 	socket.on('chatmsg', function (data) {
 		console.log("CHATMSG received:")
 		console.log(data);
+	});
+
+	socket.on('login', function (data) {
+		console.log("LOGIN received:")
+		console.log(data);
+		if (data.uname == "test") {
+			socket.emit('login',{status: 'success'});
+		}
 	});
 });

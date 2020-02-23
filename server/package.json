@@ -3,6 +3,7 @@
   "version": "0.0.1",
   "description": "my first socket.io app",
   "dependencies": {
+    "@angular/cli": "^9.0.3",
     "socket.io": "^2.3.0"
   }
 }

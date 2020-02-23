@@ -1,0 +1,56 @@
+.appheader {
+    display: grid;
+    height:30px;
+    padding: 3px;  
+    background-color: #444444;
+  
+    header {
+      display: grid;
+      text-align: left;
+      grid-template-columns: 20px 80% auto;
+      font-size: 20px;
+  
+      span {
+        color: #ff7711;
+        -webkit-app-region: drag;
+      }
+      strong {
+        color: #6b81ff;
+        -webkit-app-region: drag;
+      }
+      img {
+        width: 20px;
+      }
+  
+      nav {
+        justify-self: right;
+  
+        ul {
+          list-style-type: none;
+          margin: 0;
+          padding: 0;
+  
+          li {
+            float: left;
+            margin-left: 8px;
+  
+            img {
+              width: 20px;
+              cursor: pointer;
+            }
+          }
+        }
+      }
+    }
+}
+
+
+.appbody {
+      display: grid;
+      grid-template-columns: 100px 1px auto;
+      grid-template-rows: auto;
+      grid-template-areas: 
+        "header header header"
+        "sidebar main main";
+  }
+
